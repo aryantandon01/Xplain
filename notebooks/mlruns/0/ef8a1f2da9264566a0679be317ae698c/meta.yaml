@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/GitHubProjects/xaas/notebooks/mlruns/0/ef8a1f2da9264566a0679be317ae698c/artifacts
+end_time: 1751403229150
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ef8a1f2da9264566a0679be317ae698c
+run_name: grandiose-horse-910
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751403224969
+status: 3
+tags: []
+user_id: aryan

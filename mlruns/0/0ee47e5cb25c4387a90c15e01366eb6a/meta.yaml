@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/0ee47e5cb25c4387a90c15e01366eb6a/artifacts
+end_time: 1751404262926
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0ee47e5cb25c4387a90c15e01366eb6a
+run_name: welcoming-vole-384
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751404262875
+status: 3
+tags: []
+user_id: aryan

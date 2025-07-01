@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/31010e3145774680b637a35a6d65d102/artifacts
+end_time: 1751404743933
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 31010e3145774680b637a35a6d65d102
+run_name: entertaining-ox-700
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751404743882
+status: 3
+tags: []
+user_id: aryan

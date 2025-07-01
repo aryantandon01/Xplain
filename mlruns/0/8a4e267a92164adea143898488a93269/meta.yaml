@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/8a4e267a92164adea143898488a93269/artifacts
+end_time: 1751404751112
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8a4e267a92164adea143898488a93269
+run_name: capable-hog-483
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751404751059
+status: 3
+tags: []
+user_id: aryan
