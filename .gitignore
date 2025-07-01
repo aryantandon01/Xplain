@@ -1,0 +1,24 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# IDE / editor folders
+.idea/
+.vscode/
+
+# Model files & artifacts (optional, keep if you want to share)
+models/
+artifacts/
+
+# Data (optional, if you have local data)
+data/

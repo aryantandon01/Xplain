@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/21855aa09ea64edf89ac5f9eede8f6c5/artifacts
+end_time: 1751397132685
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 21855aa09ea64edf89ac5f9eede8f6c5
+run_name: sassy-midge-731
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751397132622
+status: 3
+tags: []
+user_id: aryan

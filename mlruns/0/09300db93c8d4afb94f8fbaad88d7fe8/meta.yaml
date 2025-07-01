@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/09300db93c8d4afb94f8fbaad88d7fe8/artifacts
+end_time: 1751397441480
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 09300db93c8d4afb94f8fbaad88d7fe8
+run_name: bittersweet-bat-500
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751397441429
+status: 3
+tags: []
+user_id: aryan

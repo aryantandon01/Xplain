@@ -2,3 +2,8 @@ scikit-learn
 shap
 pandas
 matplotlib
+fastapi
+uvicorn
+mlflow
+streamlit
+requests

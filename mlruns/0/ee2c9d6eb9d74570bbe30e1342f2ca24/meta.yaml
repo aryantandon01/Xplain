@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/ee2c9d6eb9d74570bbe30e1342f2ca24/artifacts
+end_time: 1751397286011
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ee2c9d6eb9d74570bbe30e1342f2ca24
+run_name: enthused-newt-780
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751397285947
+status: 3
+tags: []
+user_id: aryan

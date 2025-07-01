@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/79ed464c36bf4a1d8a1b98d84a5cbacd/artifacts
+end_time: 1751397270183
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 79ed464c36bf4a1d8a1b98d84a5cbacd
+run_name: kindly-lamb-967
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751397270121
+status: 3
+tags: []
+user_id: aryan

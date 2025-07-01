@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/ee60f06397f8495c8e3d50d825422e8f/artifacts
+end_time: 1751395193480
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ee60f06397f8495c8e3d50d825422e8f
+run_name: handsome-grouse-345
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751395193306
+status: 3
+tags: []
+user_id: aryan

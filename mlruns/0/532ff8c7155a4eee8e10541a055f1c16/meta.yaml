@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/532ff8c7155a4eee8e10541a055f1c16/artifacts
+end_time: 1751397270243
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 532ff8c7155a4eee8e10541a055f1c16
+run_name: wise-cod-47
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751397270197
+status: 3
+tags: []
+user_id: aryan

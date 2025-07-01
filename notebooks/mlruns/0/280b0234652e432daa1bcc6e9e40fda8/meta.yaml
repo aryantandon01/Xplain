@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/GitHubProjects/xaas/notebooks/mlruns/0/280b0234652e432daa1bcc6e9e40fda8/artifacts
+end_time: 1751394599836
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 280b0234652e432daa1bcc6e9e40fda8
+run_name: agreeable-bear-901
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751394599355
+status: 4
+tags: []
+user_id: aryan
