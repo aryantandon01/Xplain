@@ -1,4 +1,6 @@
-import shap, numpy as np
+import shap
+import numpy as np
+
 
 def explain(model, input_data):
     explainer = shap.TreeExplainer(model)
