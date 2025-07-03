@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *.so
 
+# Virtual environments
+.venv/
+venv/
+env/
+
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
@@ -15,6 +20,15 @@ __pycache__/
 # IDE / editor folders
 .idea/
 .vscode/
+
+# Build / distribution
+*.egg-info/
+dist/
+build/
+
+# Environment variables / config
+.env
+*.env
 
 # Model files & artifacts (optional, keep if you want to share)
 models/

@@ -1,0 +1,8 @@
+# Treat model weights as binary, use LFS
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.h5 filter=lfs diff=lfs merge=lfs -text
+*.pkl filter=lfs diff=lfs merge=lfs -text
+# Python files: mark as text
+*.py text
+# Jupyter notebooks: mark as text (better diffs)
+*.ipynb text
