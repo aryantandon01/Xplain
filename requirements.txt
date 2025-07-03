@@ -8,3 +8,7 @@ mlflow
 streamlit
 requests
 lime
+torch
+torchvision
+tensorflow
+captum

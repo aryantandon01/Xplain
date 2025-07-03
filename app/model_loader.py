@@ -1,7 +1,15 @@
-import joblib
+def load_model(model_type: str):
+    if model_type == "sklearn":
+        from app.models import sklearn_model
 
-MODEL_PATH = "models/model.pkl"
+        return sklearn_model.load_model()
+    elif model_type == "pytorch":
+        from app.models import pytorch_model
 
+        return pytorch_model.load_model()
+    elif model_type == "tensorflow":
+        from app.models import tensorflow_model
 
-def load_model():
-    return joblib.load(MODEL_PATH)
+        return tensorflow_model.load_model()
+    else:
+        raise ValueError(f"Unknown model type: {model_type}")

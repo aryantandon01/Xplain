@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/442b334ce26b459794472b11ed7225b6/artifacts
+end_time: 1751568698140
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 442b334ce26b459794472b11ed7225b6
+run_name: thoughtful-perch-948
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751568698032
+status: 3
+tags: []
+user_id: aryan
