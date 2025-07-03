@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Query
-from app.schemas import PredictionRequest, PredictionResponse, \
-    ExplanationResponse
+from app.schemas import PredictionRequest, PredictionResponse, ExplanationResponse
 from app.model_loader import load_model
 from app.explainers import explain
 import mlflow
@@ -18,10 +17,8 @@ def predict(request: PredictionRequest):
     return {"prediction": int(pred)}
 
 
-@app.post("/explain", response_model=ExplanationResponse,
-          summary="Explain")
-def explain_endpoint(request: PredictionRequest,
-                     explainer: str = Query("shap")):
+@app.post("/explain", response_model=ExplanationResponse, summary="Explain")
+def explain_endpoint(request: PredictionRequest, explainer: str = Query("shap")):
     shap_vals = explain(model, request.features, explainer)
     with mlflow.start_run(nested=True):
         mlflow.log_param("input_features", request.features)
