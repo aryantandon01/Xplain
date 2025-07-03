@@ -13,6 +13,6 @@ explainer = LimeTabularExplainer(
 
 def explain(model, input_data):
     exp = explainer.explain_instance(np.array(input_data), model.predict_proba,
-                                      num_features=4)
+                                     num_features=4)
     # Return list of feature, importance pairs
     return exp.as_list()

@@ -19,8 +19,8 @@ def predict(request: PredictionRequest):
 
 
 @app.post("/explain", response_model=ExplanationResponse,
-           summary="Explain")
-def explain_endpoint(request: PredictionRequest, 
+          summary="Explain")
+def explain_endpoint(request: PredictionRequest,
                      explainer: str = Query("shap")):
     shap_vals = explain(model, request.features, explainer)
     with mlflow.start_run(nested=True):
