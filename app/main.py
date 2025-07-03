@@ -18,8 +18,8 @@ def predict(request: PredictionRequest):
     return {"prediction": int(pred)}
 
 
-@app.post("/explain", response_model=ExplanationResponse
-        , summary="Explain")
+@app.post("/explain", response_model=ExplanationResponse,
+           summary="Explain")
 def explain_endpoint(request: PredictionRequest, 
                      explainer: str = Query("shap")):
     shap_vals = explain(model, request.features, explainer)
