@@ -13,12 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set PYTHONPATH
-      run: export PYTHONPATH=.
-    - name: Run tests
-      run: pytest
-
-
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -31,13 +25,12 @@ jobs:
         pip install -r requirements-dev.txt
 
     - name: Lint with flake8
-      run: |
-        flake8 app
+      run: flake8 app
 
     - name: Check formatting with black
-      run: |
-        black --check app
+      run: black --check app
 
     - name: Run tests
-      run: |
-        pytest
+      run: pytest
+      env:
+        PYTHONPATH: .
