@@ -1,8 +1,3 @@
-Awesome — here’s a **clean, professional, ATS- & GitHub-friendly `README.md` draft** for your project:
-
----
-
-````markdown
 # 🧠 Xplain - XAI Microservice
 
 A lightweight, model-agnostic **Explainable AI (XAI) microservice** built with **FastAPI**, supporting SHAP & LIME explanations out of the box.  
@@ -25,7 +20,7 @@ Use it to generate feature-level explanations for tabular ML models in real time
 ```bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-````
+
 
 ### 🐳 Run with Docker
 
@@ -101,21 +96,6 @@ Response (SHAP or LIME output, simplified):
 
 ---
 
-## 📂 Project structure
-
-```
-app/
- ├── explainers/          # SHAP, LIME and custom explainers
- ├── main.py              # FastAPI entry point
- ├── model_loader.py      # Load ML model
- └── schemas.py           # Request/response models
-Dockerfile
-docker-compose.yml
-requirements.txt
-```
-
----
-
 ## 📜 License
 
 MIT — feel free to use, share, and build on it.
@@ -125,14 +105,3 @@ MIT — feel free to use, share, and build on it.
 ## 🤝 Contributing
 
 Coming soon. For now, open an issue or PR!
-
-```
-
----
-
-✅ Let me know if you'd like:
-- A **project diagram** (can generate one)
-- A `Makefile` (e.g., `make dev`, `make docker`, etc.)
-- A `tests/` folder scaffold  
-**Shall I do the next step?** 🚀
-```
