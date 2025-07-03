@@ -4,12 +4,15 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /app
 
-# Copy project files
-COPY . /app
+# Copy requirements first
+COPY requirements.txt .
 
 # Install dependencies
 RUN pip install --upgrade pip \
  && pip install -r requirements.txt
+
+# Copy project files
+COPY . .
 
 # Expose default FastAPI port
 EXPOSE 8000

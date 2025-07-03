@@ -5,8 +5,13 @@ __pycache__/
 *.db
 *.sqlite3
 *.log
-.ipynb_checkpoints/
-.notebooks/
-.idea/
+.env
 .vscode/
+.idea/
 .DS_Store
+*.egg-info/
+*.npy
+.git
+.gitignore
+docker-compose.yml
+terraform/
