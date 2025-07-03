@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/b14bc41688374269bc6daa9a2e64254e/artifacts
+end_time: 1751569487740
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b14bc41688374269bc6daa9a2e64254e
+run_name: monumental-stoat-488
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751569487695
+status: 3
+tags: []
+user_id: aryan
