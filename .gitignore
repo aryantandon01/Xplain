@@ -22,5 +22,3 @@ artifacts/
 
 # Data (optional, if you have local data)
 data/
-
-!app\models\__init__.py
