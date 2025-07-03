@@ -31,6 +31,9 @@ jobs:
       run: black --check app
 
     - name: Run tests
-      run: pytest
+      run: |
+        echo "Current dir: $(pwd)"
+        ls -la
+        pytest
       env:
         PYTHONPATH: .

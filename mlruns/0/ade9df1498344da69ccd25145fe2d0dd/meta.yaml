@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/ade9df1498344da69ccd25145fe2d0dd/artifacts
+end_time: 1751570073422
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ade9df1498344da69ccd25145fe2d0dd
+run_name: useful-lynx-234
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751570073357
+status: 3
+tags: []
+user_id: aryan
