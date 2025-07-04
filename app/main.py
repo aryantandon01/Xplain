@@ -3,6 +3,7 @@ from app.schemas import PredictionRequest, PredictionResponse, ExplanationRespon
 from app.model_loader import load_model
 from app.explainers import explain
 import mlflow
+import numpy as np
 
 app = FastAPI()
 
@@ -21,7 +22,8 @@ def predict(
             pred = model(input_tensor).numpy()[0]
         pred_class = int(pred.argmax())  # assuming binary or multiclass
     elif model_type == "tensorflow":
-        pred = model.predict([request.features])[0]
+        input_array = np.array([request.features])
+        pred = model.predict(input_array)[0]
         pred_class = int(pred.argmax())
     else:  # sklearn
         pred_class = int(model.predict([request.features])[0])
