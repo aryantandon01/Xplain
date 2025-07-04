@@ -1,11 +1,11 @@
-# 🧠 Xplain - XAI Microservice
+# Xplain - XAI Microservice
 
 A lightweight, model-agnostic **Explainable AI (XAI) microservice** built with **FastAPI**, supporting SHAP & LIME explanations out of the box.  
 Use it to generate feature-level explanations for tabular ML models in real time — locally, in Docker, or in production.
 
 ---
 
-## 🚀 Features
+## Features
 - FastAPI-based REST API for predictions & explanations
 - Plug-and-play explainers: **SHAP**, **LIME**
 - Tracks inputs & outputs using **MLflow**
@@ -14,22 +14,22 @@ Use it to generate feature-level explanations for tabular ML models in real time
 
 ---
 
-## 📦 Quickstart
+## Quickstart
 
-### ✅ Run locally (dev mode)
+### Run locally (dev mode)
 ```bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### 🐳 Run with Docker
+### Run with Docker
 
 ```bash
 docker build -t xplain-api .
 docker run -p 8000:8000 xplain-api
 ```
 
-### 🐳⚙ Run full stack (API + MLflow) with Docker Compose
+### Run full stack (API + MLflow) with Docker Compose
 
 ```bash
 docker compose up --build
@@ -40,7 +40,7 @@ docker compose up --build
 
 ---
 
-## 🔍 API Endpoints
+## API Endpoints
 
 ### `POST /predict`
 
@@ -88,7 +88,7 @@ Response (SHAP or LIME output, simplified):
 
 ---
 
-## 🛠 Extending
+## Extending
 
 * Add a new explainer: create `app/explainers/your_explainer.py`
 * Update `app/explainers/__init__.py` to register it
@@ -96,7 +96,7 @@ Response (SHAP or LIME output, simplified):
 
 ---
 
-## 📜 License
+## License
 
 MIT — feel free to use, share, and build on it.
 
