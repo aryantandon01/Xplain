@@ -41,7 +41,7 @@ def explain_endpoint(
     model_type: str = Query("sklearn"),
 ):
     model = load_model(model_type)
-    shap_vals = explain(model, request.features, explainer)
+    shap_vals = explain(model, request.features, explainer, model_type)
 
     with mlflow.start_run(nested=True):
         mlflow.log_param("input_features", request.features)

@@ -1,10 +1,8 @@
-from app.explainers import shap_explainer, lime_explainer
+from .shap_explainer import shap_explain
+from .lime_explainer import lime_explain
 
-
-def explain(model, input_data, explainer_type):
-    if explainer_type == "shap":
-        return shap_explainer.explain(model, input_data)
-    elif explainer_type == "lime":
-        return lime_explainer.explain(model, input_data)
+def explain(model, input_features, explainer="shap", model_type="sklearn"):
+    if explainer == "lime":
+        return lime_explain(model, input_features)  # only works for sklearn for now
     else:
-        raise ValueError(f"Unknown explainer: {explainer_type}")
+        return shap_explain(model, input_features, model_type=model_type)
