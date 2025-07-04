@@ -1,7 +1,6 @@
 from lime.lime_tabular import LimeTabularExplainer
 import numpy as np
 
-# assume training_data is loaded at startup; simplify here
 training_data = np.load("app/training_data.npy")
 
 explainer = LimeTabularExplainer(
@@ -9,9 +8,26 @@ explainer = LimeTabularExplainer(
 )
 
 
-def lime_explain(model, input_data):
-    exp = explainer.explain_instance(
-        np.array(input_data), model.predict_proba, num_features=4
-    )
-    # Return list of feature, importance pairs
+def lime_explain(model, input_data, model_type="sklearn"):
+    input_array = np.array(input_data)
+
+    # wrap model to provide predict_proba
+    if model_type == "tensorflow":
+
+        def predict_proba(X):
+            return model.predict(X)
+
+    elif model_type == "pytorch":
+        import torch
+
+        def predict_proba(X):
+            with torch.no_grad():
+                input_tensor = torch.tensor(X, dtype=torch.float32)
+                outputs = model(input_tensor).numpy()
+                return outputs
+
+    else:  # sklearn
+        predict_proba = model.predict_proba
+
+    exp = explainer.explain_instance(input_array, predict_proba, num_features=4)
     return exp.as_list()
