@@ -5,6 +5,7 @@ import numpy as np
 # background data: use small random sample or fixed dummy
 background = np.random.rand(10, 4)  # shape should match your model input
 
+
 def shap_explain(model, input_features, model_type="sklearn"):
     X = np.array([input_features])
 
