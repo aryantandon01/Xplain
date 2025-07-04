@@ -1,7 +1,7 @@
 # Xplain - Explainable AI Microservice
 
 Xplain is a lightweight, model-agnostic Explainable AI (XAI) microservice built with FastAPI.
-It provides real-time feature-level explanations for tabular ML models using SHAP and LIME, with extensible architecture to support more explainers and models.
+It provides real-time feature-level explanations for tabular ML models using SHAP and LIME out of the box, with extensible architecture to support more explainers and models.
 
 ---
 
@@ -26,12 +26,41 @@ It provides real-time feature-level explanations for tabular ML models using SHA
 * Streamlit (optional dashboard)
 
 ---
+## Project Structure
 
-## Quickstart
+```bash
+Xplain
+├── app/
+│   ├── explainers/              # SHAP & LIME wrappers
+│   │   ├── __init__.py
+│   │   ├── lime_explainer.py
+│   │   └── shap_explainer.py
+│   ├── models/                  # Example models
+│   │   ├── sklearn_model.py
+│   │   ├── tensorflow_model.py
+│   │   └── pytorch_model.py
+│   ├── main.py                  # FastAPI app
+│   ├── model_loader.py
+│   ├── schemas.py
+│   └── training_data.npy        # Data for LIME/SHAP background
+├── tests/                       # Tests
+│   ├── test_main.py
+│   └── test_models.py
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── requirements-dev.txt
+└── README.md
+```
+---
+
+## Quickstart (3 Methods to run this)
 
 ### Run locally (development)
 
 ```bash
+git clone https://github.com/aryantandon01/Xplain.git
+cd Xplain
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
@@ -91,8 +120,18 @@ Response:
 ```json
 {
   "shap_values": [
-    ["f1 <= 5.10", -0.02],
-    ["f2 > 3.40", 0.03]
+    [
+      "f1",
+      0.06521656829575624
+    ],
+    [
+      "f2",
+      -0.025804609295375428
+    ],
+    [
+      "f3",
+      -0.03941195900038079
+    ]
   ]
 }
 ```
@@ -101,16 +140,21 @@ Response:
 
 ## Extending
 
-To add a new explainer:
+### Add a new explainer
 
-1. Create a file in `app/explainers/`, e.g., `your_explainer.py`
-2. Update `app/explainers/__init__.py` to register it
-3. It will be available via `?explainer=your_explainer` in the `/explain` endpoint
+1. Create a new file in `app/explainers/`, e.g., `your_explainer.py`
+2. Implement a function like `your_explain(...)` that takes `(model, input_features)`
+3. Update `app/explainers/__init__.py` to import and register it inside the `explain` function
+4. Use it via query param: `?explainer=your_explainer` on the `/explain` endpoint
 
-To add new models:
+---
 
-* Place the wrapper under `app/models/`
-* Update `app/model_loader.py` accordingly
+### Add a new model type
+
+1. Add your wrapper in `app/models/`, e.g., `my_model.py`
+2. Implement `load_model()` to return the trained model
+3. Update `app/model_loader.py` to load your new model type when `model_type="my_model"`
+4. Use it via query param: `?model_type=my_model` on both `/predict` and `/explain` endpoints
 
 ---
 
