@@ -33,6 +33,7 @@ build/
 # Model files & artifacts (optional, keep if you want to share)
 models/
 artifacts/
+mlruns/
 
 # Data (optional, if you have local data)
 data/
