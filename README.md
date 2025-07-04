@@ -114,26 +114,6 @@ To add new models:
 
 ---
 
-## Project Structure
-
-```
-.
-├── app/
-│   ├── explainers/
-│   ├── models/
-│   ├── main.py
-│   └── ...
-├── dashboard/ (optional Streamlit dashboard)
-├── notebooks/ (experiments & demos)
-├── tests/
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── ...
-```
-
----
-
 ## License
 
 MIT License – you are free to use, modify, and share this project.
